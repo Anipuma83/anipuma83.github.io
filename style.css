@@ -1,0 +1,267 @@
+div{
+  display: block;
+  background-color: #f3c955;
+  box-sizing: border-box;
+  width: 400pt;
+}
+
+label{
+  padding-left: 5pt;
+}
+
+table{
+  border-collapse: collapse
+}
+
+th,td{
+  
+  border: 1px solid rgb(8, 5, 0);
+  padding: 10px;
+}
+
+#print {
+  position: fixed;
+  top: 90%; left: 25%;
+  display: block;
+  padding: 15px 40px;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #faac05;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+#calculs{
+  position: fixed;
+  top: 90%; left: 1%;
+  display: block;
+  padding: 15px 40px;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #faac05;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+button:hover {background-color: #f30b0b}
+
+button:active {
+  color: black;
+  background-color: #fcfcfa;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+input[name="masseid"] {
+  position: relative;
+  top: 10%; left: 50pt;
+  border: 2px solid black;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 18px;
+  padding: 5px;
+  height: 35px;
+  width: 70px;
+}
+
+
+input[name="masseidatt"] {
+  position: relative;
+  top: 10%; left: 100pt;
+  border: 2px solid black;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 18px;
+  padding: 5px;
+  height: 35px;
+  width: 70px;
+}
+
+input[name="masseiddeg"] {
+  position: relative;
+  top: 10%; left: 150pt;
+  border: 2px solid black;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 18px;
+  padding: 5px;
+  height: 35px;
+  width: 70px;
+}
+
+
+input[name="zpid"] {
+  position: relative;
+  top: 10%; left: 42pt;
+  border: 2px solid black;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 18px;
+  padding: 5px;
+  height: 35px;
+  width: 70px;
+}
+input[name="zpidatt"] {
+  position: relative;
+  top: 10%; left: 92pt;
+  border: 2px solid black;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 18px;
+  padding: 5px;
+  height: 35px;
+  width: 70px;
+}
+input[name="zpiddeg"] {
+  position: relative;
+  top: 10%; left: 142pt;
+  border: 2px solid black;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 18px;
+  padding: 5px;
+  height: 35px;
+  width: 70px;
+}
+
+
+input[name="tempeid"] {
+  position: relative;
+  top: 10%; left: 20pt;
+  border: 2px solid black;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 18px;
+  padding: 5px;
+  height: 35px;
+  width: 70px;
+}
+
+input[name="tempeidatt"] {
+  position: relative;
+  top: 10%; left: 70pt;
+  border: 2px solid black;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 18px;
+  padding: 5px;
+  height: 35px;
+  width: 70px;
+}
+input[name="tempeiddeg"] {
+  position: relative;
+  top: 10%; left: 120pt;
+  border: 2px solid black;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 18px;
+  padding: 5px;
+  height: 35px;
+  width: 70px;
+}
+
+
+
+input[name="ventid"] {
+  position: relative;
+  top: 10%; left: 58pt;
+  border: 2px solid black;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 18px;
+  padding: 5px;
+  height: 35px;
+  width: 70px;
+} 
+input[name="ventidatt"] {
+  position: relative;
+  top: 10%; left: 108pt;
+  border: 2px solid black;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 18px;
+  padding: 5px;
+  height: 35px;
+  width: 70px;
+} 
+input[name="ventiddeg"] {
+  position: relative;
+  top: 10%; left: 158pt;
+  border: 2px solid black;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 18px;
+  padding: 5px;
+  height: 35px;
+  width: 70px;
+} 
+
+#menu__toggle {
+  opacity: 0;
+}
+#menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+#menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  left: 0 !important;
+}
+.menu__btn {
+  position: fixed;
+  top: 50%;
+  left: auto;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+  transition-duration: .25s;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+.menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #ECEFF1;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  transition-duration: .25s;
+}
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+}

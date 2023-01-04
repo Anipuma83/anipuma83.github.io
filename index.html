@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Perfos 135</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="calculs.js"></script>
+    <link rel="icon" href="favicon.ico" />
+  </head>
+  <div class="hamburger-menu">
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+
+    <ul class="menu__box">
+      <li><a class="menu__item" href="devis.html">Devis</a></li>
+      <li><a class="menu__item" href="index.html">Perfos</a></li>
+      <li><a class="menu__item" href="diagsLong.html">Cg Long</a></li>
+      <li><a class="menu__item" href="diagsLat.html">Cg Lat</a></li>
+      <!-- <li><a class="menu__item" href="#">Twitter</a></li> -->
+    </ul>
+  </div>
+
+  <body>
+    <div>
+      <h1></h1>
+      <h1></h1>
+      <h1></h1>
+      <h1></h1>
+      <label style="position: relative; left: 115px">DECOLLAGE</label>
+      <label style="position: relative; left: 145px">ATTERRISSAGE</label>
+      <label style="position: relative; left: 170px">DEGAGEMENT</label>
+
+      <br />
+
+      <label for="masseid" name="masseid">Masse</label>
+      <input
+        list="masse"
+        id="masseid"
+        name="masseid"
+        onfocus="this.value=''"
+        onchange="this.blur();"
+      />
+      <datalist id="masse">
+        <option value="2910"></option>
+        <option value="2900"></option>
+        <option value="2890"></option>
+        <option value="2880"></option>
+        <option value="2870"></option>
+        <option value="2860"></option>
+        <option value="2850"></option>
+        <option value="2840"></option>
+        <option value="2830"></option>
+        <option value="2820"></option>
+        <option value="2810"></option>
+        <option value="2800"></option>
+        <option value="2790"></option>
+        <option value="2780"></option>
+        <option value="2770"></option>
+        <option value="2760"></option>
+        <option value="2750"></option>
+        <option value="2740"></option>
+        <option value="2730"></option>
+        <option value="2720"></option>
+        <option value="2710"></option>
+        <option value="2700"></option>
+        <option value="2690"></option>
+        <option value="2680"></option>
+        <option value="2670"></option>
+        <option value="2660"></option>
+        <option value="2650"></option>
+        <option value="2640"></option>
+        <option value="2630"></option>
+        <option value="2620"></option>
+        <option value="2610"></option>
+        <option value="2600"></option>
+        <option value="2590"></option>
+        <option value="2580"></option>
+        <option value="2570"></option>
+        <option value="2560"></option>
+        <option value="2550"></option>
+        <option value="2540"></option>
+        <option value="2530"></option>
+        <option value="2520"></option>
+        <option value="2510"></option>
+        <option value="2500"></option>
+      </datalist>
+
+      <input
+        list="masseatt"
+        id="masseidatt"
+        name="masseidatt"
+        onfocus="this.value=''"
+        onchange="this.blur();"
+      />
+      <datalist id="masseatt">
+        <option value="2910"></option>
+        <option value="2900"></option>
+        <option value="2890"></option>
+        <option value="2880"></option>
+        <option value="2870"></option>
+        <option value="2860"></option>
+        <option value="2850"></option>
+        <option value="2840"></option>
+        <option value="2830"></option>
+        <option value="2820"></option>
+        <option value="2810"></option>
+        <option value="2800"></option>
+        <option value="2790"></option>
+        <option value="2780"></option>
+        <option value="2770"></option>
+        <option value="2760"></option>
+        <option value="2750"></option>
+        <option value="2740"></option>
+        <option value="2730"></option>
+        <option value="2720"></option>
+        <option value="2710"></option>
+        <option value="2700"></option>
+        <option value="2690"></option>
+        <option value="2680"></option>
+        <option value="2670"></option>
+        <option value="2660"></option>
+        <option value="2650"></option>
+        <option value="2640"></option>
+        <option value="2630"></option>
+        <option value="2620"></option>
+        <option value="2610"></option>
+        <option value="2600"></option>
+        <option value="2590"></option>
+        <option value="2580"></option>
+        <option value="2570"></option>
+        <option value="2560"></option>
+        <option value="2550"></option>
+        <option value="2540"></option>
+        <option value="2530"></option>
+        <option value="2520"></option>
+        <option value="2510"></option>
+        <option value="2500"></option>
+      </datalist>
+
+      <input
+        list="massedeg"
+        id="masseiddeg"
+        name="masseiddeg"
+        onfocus="this.value=''"
+        onchange="this.blur();"
+      />
+      <br />
+      <datalist id="massedeg">
+        <option value="2910"></option>
+        <option value="2900"></option>
+        <option value="2890"></option>
+        <option value="2880"></option>
+        <option value="2870"></option>
+        <option value="2860"></option>
+        <option value="2850"></option>
+        <option value="2840"></option>
+        <option value="2830"></option>
+        <option value="2820"></option>
+        <option value="2810"></option>
+        <option value="2800"></option>
+        <option value="2790"></option>
+        <option value="2780"></option>
+        <option value="2770"></option>
+        <option value="2760"></option>
+        <option value="2750"></option>
+        <option value="2740"></option>
+        <option value="2730"></option>
+        <option value="2720"></option>
+        <option value="2710"></option>
+        <option value="2700"></option>
+        <option value="2690"></option>
+        <option value="2680"></option>
+        <option value="2670"></option>
+        <option value="2660"></option>
+        <option value="2650"></option>
+        <option value="2640"></option>
+        <option value="2630"></option>
+        <option value="2620"></option>
+        <option value="2610"></option>
+        <option value="2600"></option>
+        <option value="2590"></option>
+        <option value="2580"></option>
+        <option value="2570"></option>
+        <option value="2560"></option>
+        <option value="2550"></option>
+        <option value="2540"></option>
+        <option value="2530"></option>
+        <option value="2520"></option>
+        <option value="2510"></option>
+        <option value="2500"></option>
+      </datalist>
+
+      <label for="zpid" name="zpid">Altitude</label>
+      <input
+        list="zp"
+        id="zpid"
+        name="zpid"
+        onfocus="this.value=''"
+        onchange="this.blur();"
+      />
+      <datalist id="zp">
+        <option value="0"></option>
+        <option value="500"></option>
+        <option value="1000"></option>
+        <option value="1500"></option>
+        <option value="2000"></option>
+        <option value="2500"></option>
+        <option value="3000"></option>
+        <option value="3500"></option>
+        <option value="4000"></option>
+        <option value="4500"></option>
+        <option value="5000"></option>
+        <option value="5500"></option>
+        <option value="6000"></option>
+        <option value="6500"></option>
+        <option value="7000"></option>
+        <option value="7500"></option>
+        <option value="8000"></option>
+        <option value="8500"></option>
+        <option value="9000"></option>
+        <option value="9500"></option>
+        <option value="10000"></option>
+        <option value="10500"></option>
+        <option value="11000"></option>
+        <option value="11500"></option>
+        <option value="12000"></option>
+      </datalist>
+
+      <input
+        list="zpatt"
+        id="zpidatt"
+        name="zpidatt"
+        onfocus="this.value=''"
+        onchange="this.blur();"
+      />
+      <datalist id="zpatt">
+        <option value="0"></option>
+        <option value="500"></option>
+        <option value="1000"></option>
+        <option value="1500"></option>
+        <option value="2000"></option>
+        <option value="2500"></option>
+        <option value="3000"></option>
+        <option value="3500"></option>
+        <option value="4000"></option>
+        <option value="4500"></option>
+        <option value="5000"></option>
+        <option value="5500"></option>
+        <option value="6000"></option>
+        <option value="6500"></option>
+        <option value="7000"></option>
+        <option value="7500"></option>
+        <option value="8000"></option>
+        <option value="8500"></option>
+        <option value="9000"></option>
+        <option value="9500"></option>
+        <option value="10000"></option>
+        <option value="10500"></option>
+        <option value="11000"></option>
+        <option value="11500"></option>
+        <option value="12000"></option>
+      </datalist>
+
+      <input
+        list="zpdeg"
+        id="zpiddeg"
+        name="zpiddeg"
+        onfocus="this.value=''"
+        onchange="this.blur();"
+      /><br />
+      <datalist id="zpdeg">
+        <option value="0"></option>
+        <option value="500"></option>
+        <option value="1000"></option>
+        <option value="1500"></option>
+        <option value="2000"></option>
+        <option value="2500"></option>
+        <option value="3000"></option>
+        <option value="3500"></option>
+        <option value="4000"></option>
+        <option value="4500"></option>
+        <option value="5000"></option>
+        <option value="5500"></option>
+        <option value="6000"></option>
+        <option value="6500"></option>
+        <option value="7000"></option>
+        <option value="7500"></option>
+        <option value="8000"></option>
+        <option value="8500"></option>
+        <option value="9000"></option>
+        <option value="9500"></option>
+        <option value="10000"></option>
+        <option value="10500"></option>
+        <option value="11000"></option>
+        <option value="11500"></option>
+        <option value="12000"></option>
+      </datalist>
+
+      <label for="tempe"> Temperature </label>
+      <!-- list="tempe" -->
+      <input
+        inputmode="numeric"
+        id="tempeid"
+        name="tempeid"
+        onfocus="this.value=''"
+        onchange="this.blur();"
+      />
+      <!-- <datalist id="tempe">
+        <option value="50"></option>
+        <option value="49"></option>
+        <option value="48"></option>
+        <option value="47"></option>
+        <option value="46"></option>
+        <option value="45"></option>
+        <option value="44"></option>
+        <option value="43"></option>
+        <option value="42"></option>
+        <option value="41"></option>
+        <option value="40"></option>
+        <option value="39"></option>
+        <option value="38"></option>
+        <option value="37"></option>
+        <option value="36"></option>
+        <option value="35"></option>
+        <option value="34"></option>
+        <option value="33"></option>
+        <option value="32"></option>
+        <option value="31"></option>
+        <option value="30"></option>
+        <option value="29"></option>
+        <option value="28"></option>
+        <option value="27"></option>
+        <option value="26"></option>
+        <option value="25"></option>
+        <option value="24"></option>
+        <option value="23"></option>
+        <option value="22"></option>
+        <option value="21"></option>
+        <option value="20"></option>
+        <option value="19"></option>
+        <option value="18"></option>
+        <option value="17"></option>
+        <option value="16"></option>
+        <option value="15"></option>
+        <option value="14"></option>
+        <option value="13"></option>
+        <option value="12"></option>
+        <option value="11"></option>
+        <option value="10"></option>
+        <option value="9"></option>
+        <option value="8"></option>
+        <option value="7"></option>
+        <option value="6"></option>
+        <option value="5"></option>
+        <option value="4"></option>
+        <option value="3"></option>
+        <option value="2"></option>
+        <option value="1"></option>
+        <option value="0"></option>
+        <option value="-1"></option>
+        <option value="-2"></option>
+        <option value="-3"></option>
+        <option value="-4"></option>
+        <option value="-5"></option>
+        <option value="-6"></option>
+        <option value="-7"></option>
+        <option value="-8"></option>
+        <option value="-9"></option>
+        <option value="-10"></option>
+        <option value="-11"></option>
+        <option value="-12"></option>
+        <option value="-13"></option>
+        <option value="-14"></option>
+        <option value="-15"></option>
+        <option value="-16"></option>
+        <option value="-17"></option>
+        <option value="-18"></option>
+        <option value="-19"></option>
+        <option value="-20"></option>
+        <option value="-21"></option>
+        <option value="-22"></option>
+        <option value="-23"></option>
+        <option value="-24"></option>
+        <option value="-25"></option>
+        <option value="-26"></option>
+        <option value="-27"></option>
+        <option value="-28"></option>
+        <option value="-29"></option>
+        <option value="-30"></option>
+        <option value="-31"></option>
+        <option value="-32"></option>
+        <option value="-33"></option>
+        <option value="-34"></option>
+        <option value="-35"></option>
+      </datalist> -->
+      <!-- list="tempeatt" -->
+      <input
+        inputmode="numeric"
+        id="tempeidatt"
+        name="tempeidatt"
+        onfocus="this.value=''"
+        onchange="this.blur();"
+      />
+      <!-- <datalist id="tempeatt">
+        <option value="50"></option>
+        <option value="49"></option>
+        <option value="48"></option>
+        <option value="47"></option>
+        <option value="46"></option>
+        <option value="45"></option>
+        <option value="44"></option>
+        <option value="43"></option>
+        <option value="42"></option>
+        <option value="41"></option>
+        <option value="40"></option>
+        <option value="39"></option>
+        <option value="38"></option>
+        <option value="37"></option>
+        <option value="36"></option>
+        <option value="35"></option>
+        <option value="34"></option>
+        <option value="33"></option>
+        <option value="32"></option>
+        <option value="31"></option>
+        <option value="30"></option>
+        <option value="29"></option>
+        <option value="28"></option>
+        <option value="27"></option>
+        <option value="26"></option>
+        <option value="25"></option>
+        <option value="24"></option>
+        <option value="23"></option>
+        <option value="22"></option>
+        <option value="21"></option>
+        <option value="20"></option>
+        <option value="19"></option>
+        <option value="18"></option>
+        <option value="17"></option>
+        <option value="16"></option>
+        <option value="15"></option>
+        <option value="14"></option>
+        <option value="13"></option>
+        <option value="12"></option>
+        <option value="11"></option>
+        <option value="10"></option>
+        <option value="9"></option>
+        <option value="8"></option>
+        <option value="7"></option>
+        <option value="6"></option>
+        <option value="5"></option>
+        <option value="4"></option>
+        <option value="3"></option>
+        <option value="2"></option>
+        <option value="1"></option>
+        <option value="0"></option>
+        <option value="-1"></option>
+        <option value="-2"></option>
+        <option value="-3"></option>
+        <option value="-4"></option>
+        <option value="-5"></option>
+        <option value="-6"></option>
+        <option value="-7"></option>
+        <option value="-8"></option>
+        <option value="-9"></option>
+        <option value="-10"></option>
+        <option value="-11"></option>
+        <option value="-12"></option>
+        <option value="-13"></option>
+        <option value="-14"></option>
+        <option value="-15"></option>
+        <option value="-16"></option>
+        <option value="-17"></option>
+        <option value="-18"></option>
+        <option value="-19"></option>
+        <option value="-20"></option>
+        <option value="-21"></option>
+        <option value="-22"></option>
+        <option value="-23"></option>
+        <option value="-24"></option>
+        <option value="-25"></option>
+        <option value="-26"></option>
+        <option value="-27"></option>
+        <option value="-28"></option>
+        <option value="-29"></option>
+        <option value="-30"></option>
+        <option value="-31"></option>
+        <option value="-32"></option>
+        <option value="-33"></option>
+        <option value="-34"></option>
+        <option value="-35"></option>
+      </datalist> -->
+      <!-- list="tempedeg" -->
+      <input
+        inputmode="numeric"
+        id="tempeiddeg"
+        name="tempeiddeg"
+        onfocus="this.value=''"
+        onchange="this.blur();"
+      /><br />
+      <!-- <datalist id="tempedeg">
+        <option value="50"></option>
+        <option value="49"></option>
+        <option value="48"></option>
+        <option value="47"></option>
+        <option value="46"></option>
+        <option value="45"></option>
+        <option value="44"></option>
+        <option value="43"></option>
+        <option value="42"></option>
+        <option value="41"></option>
+        <option value="40"></option>
+        <option value="39"></option>
+        <option value="38"></option>
+        <option value="37"></option>
+        <option value="36"></option>
+        <option value="35"></option>
+        <option value="34"></option>
+        <option value="33"></option>
+        <option value="32"></option>
+        <option value="31"></option>
+        <option value="30"></option>
+        <option value="29"></option>
+        <option value="28"></option>
+        <option value="27"></option>
+        <option value="26"></option>
+        <option value="25"></option>
+        <option value="24"></option>
+        <option value="23"></option>
+        <option value="22"></option>
+        <option value="21"></option>
+        <option value="20"></option>
+        <option value="19"></option>
+        <option value="18"></option>
+        <option value="17"></option>
+        <option value="16"></option>
+        <option value="15"></option>
+        <option value="14"></option>
+        <option value="13"></option>
+        <option value="12"></option>
+        <option value="11"></option>
+        <option value="10"></option>
+        <option value="9"></option>
+        <option value="8"></option>
+        <option value="7"></option>
+        <option value="6"></option>
+        <option value="5"></option>
+        <option value="4"></option>
+        <option value="3"></option>
+        <option value="2"></option>
+        <option value="1"></option>
+        <option value="0"></option>
+        <option value="-1"></option>
+        <option value="-2"></option>
+        <option value="-3"></option>
+        <option value="-4"></option>
+        <option value="-5"></option>
+        <option value="-6"></option>
+        <option value="-7"></option>
+        <option value="-8"></option>
+        <option value="-9"></option>
+        <option value="-10"></option>
+        <option value="-11"></option>
+        <option value="-12"></option>
+        <option value="-13"></option>
+        <option value="-14"></option>
+        <option value="-15"></option>
+        <option value="-16"></option>
+        <option value="-17"></option>
+        <option value="-18"></option>
+        <option value="-19"></option>
+        <option value="-20"></option>
+        <option value="-21"></option>
+        <option value="-22"></option>
+        <option value="-23"></option>
+        <option value="-24"></option>
+        <option value="-25"></option>
+        <option value="-26"></option>
+        <option value="-27"></option>
+        <option value="-28"></option>
+        <option value="-29"></option>
+        <option value="-30"></option>
+        <option value="-31"></option>
+        <option value="-32"></option>
+        <option value="-33"></option>
+        <option value="-34"></option>
+        <option value="-35"></option>
+      </datalist> -->
+
+      <label for="vent"> Vent </label>
+      <!-- list="vent" -->
+      <input
+        inputmode="numeric"
+        id="ventid"
+        name="ventid"
+        onfocus="this.value=''"
+        onchange="this.blur();"
+      />
+      <!-- <datalist id="vent">
+        <option value="0"></option>
+        <option value="1"></option>
+        <option value="2"></option>
+        <option value="3"></option>
+        <option value="4"></option>
+        <option value="5"></option>
+        <option value="6"></option>
+        <option value="7"></option>
+        <option value="8"></option>
+        <option value="9"></option>
+        <option value="10"></option>
+        <option value="11"></option>
+        <option value="12"></option>
+        <option value="13"></option>
+        <option value="14"></option>
+        <option value="15"></option>
+        <option value="16"></option>
+        <option value="17"></option>
+        <option value="18"></option>
+        <option value="19"></option>
+        <option value="20"></option>
+        <option value="21"></option>
+        <option value="22"></option>
+        <option value="23"></option>
+        <option value="24"></option>
+        <option value="25"></option>
+        <option value="26"></option>
+        <option value="27"></option>
+        <option value="28"></option>
+        <option value="29"></option>
+        <option value="30"></option>
+      </datalist> -->
+
+      <input
+        inputmode="numeric"
+        id="ventidatt"
+        name="ventidatt"
+        onfocus="this.value=''"
+        onchange="this.blur();"
+      />
+      <!-- <datalist id="ventatt">
+        <option value="0"></option>
+        <option value="1"></option>
+        <option value="2"></option>
+        <option value="3"></option>
+        <option value="4"></option>
+        <option value="5"></option>
+        <option value="6"></option>
+        <option value="7"></option>
+        <option value="8"></option>
+        <option value="9"></option>
+        <option value="10"></option>
+        <option value="11"></option>
+        <option value="12"></option>
+        <option value="13"></option>
+        <option value="14"></option>
+        <option value="15"></option>
+        <option value="16"></option>
+        <option value="17"></option>
+        <option value="18"></option>
+        <option value="19"></option>
+        <option value="20"></option>
+        <option value="21"></option>
+        <option value="22"></option>
+        <option value="23"></option>
+        <option value="24"></option>
+        <option value="25"></option>
+        <option value="26"></option>
+        <option value="27"></option>
+        <option value="28"></option>
+        <option value="29"></option>
+        <option value="30"></option>
+      </datalist> -->
+      <!-- list="ventdeg" -->
+      <input
+        inputmode="numeric"
+        id="ventiddeg"
+        name="ventiddeg"
+        onfocus="this.value=''"
+        onchange="this.blur();"
+      /><br />
+      <!-- <datalist id="ventdeg">
+        <option value="0"></option>
+        <option value="1"></option>
+        <option value="2"></option>
+        <option value="3"></option>
+        <option value="4"></option>
+        <option value="5"></option>
+        <option value="6"></option>
+        <option value="7"></option>
+        <option value="8"></option>
+        <option value="9"></option>
+        <option value="10"></option>
+        <option value="11"></option>
+        <option value="12"></option>
+        <option value="13"></option>
+        <option value="14"></option>
+        <option value="15"></option>
+        <option value="16"></option>
+        <option value="17"></option>
+        <option value="18"></option>
+        <option value="19"></option>
+        <option value="20"></option>
+        <option value="21"></option>
+        <option value="22"></option>
+        <option value="23"></option>
+        <option value="24"></option>
+        <option value="25"></option>
+        <option value="26"></option>
+        <option value="27"></option>
+        <option value="28"></option>
+        <option value="29"></option>
+        <option value="30"></option>
+      </datalist> -->
+    </div>
+
+    <button onclick="initVariables()" id="calculs">Calculs</button>
+
+    <h1 style="background-color: mediumspringgreen">Prépa VFR</h1>
+    <br />
+    <br />
+    <br />
+
+    <table id="feuille_perfos">
+      <tbody>
+        <tr>
+          <td colspan="3" rowspan="2">FDO</td>
+          <td colspan="2" bgcolor="#999290">FZBGJ</td>
+          <td bgcolor="#999290">551</td>
+          <td colspan="4">TR0</td>
+        </tr>
+
+        <tr>
+          <td colspan="3">D/L :</td>
+          <td colspan="3" bgcolor="#FBFB04">300</td>
+          <td bgcolor="#FBFB04">Kg</td>
+        </tr>
+
+        <tr>
+          <td colspan="3" rowspan="2"></td>
+          <td colspan="2">Mission :</td>
+          <td align="center">SUMA</td>
+          <td>T°:</td>
+          <td>tempe</td>
+          <td>Zp:</td>
+          <td>zpval</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">Durée :</td>
+          <td bgcolor="#FBFB04" align="center">1H15</td>
+          <td>T°:</td>
+          <td>tempe</td>
+          <td>Zp:</td>
+          <td>zpval</td>
+        </tr>
+
+        <tr>
+          <td>ATIS</td>
+          <td colspan="2" align="center">D/L</td>
+          <td colspan="2" align="center">ATR</td>
+          <td bgcolor="E8E5E4"></td>
+          <td colspan="2" align="center">MASSE</td>
+          <td colspan="2" align="center">TRO</td>
+        </tr>
+
+        <tr>
+          <td bgcolor="E8E5E4">Masse:</td>
+          <td>masse</td>
+          <td>kg</td>
+          <td>2580</td>
+          <td>kg</td>
+          <td bgcolor="E8E5E4">MONO DES FIG 5.24</td>
+          <td>des1</td>
+          <td>kg</td>
+          <td></td>
+          <td>kg</td>
+        </tr>
+
+        <tr>
+          <td bgcolor="E8E5E4">Centrage:</td>
+          <td colspan="2">4258</td>
+          <td colspan="2">4289</td>
+          <td bgcolor="E8E5E4">MONO HES</td>
+          <td>hes1</td>
+          <td>kg</td>
+          <td></td>
+          <td>kg</td>
+        </tr>
+
+        <tr>
+          <td bgcolor="E8E5E4">DH/V</td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+          <td bgcolor="E8E5E4">MM DEG</td>
+          <td>mmdeg</td>
+          <td>kg</td>
+          <td></td>
+          <td>kg</td>
+        </tr>
+
+        <tr>
+          <td bgcolor="E8E5E4">DF 35</td>
+          <td>df35</td>
+          <td>m</td>
+          <td colspan="2" bgcolor="#999290"></td>
+          <td bgcolor="E8E5E4">MM PONCT</td>
+          <td>mmponct</td>
+          <td>kg</td>
+          <td></td>
+          <td>kg</td>
+        </tr>
+
+        <tr>
+          <td bgcolor="E8E5E4">DAA</td>
+          <td>daa</td>
+          <td>m</td>
+          <td colspan="2" bgcolor="#999290"></td>
+          <td bgcolor="E8E5E4">MM DEG training</td>
+          <td bgcolor="#999290"></td>
+          <td>kg</td>
+          <td bgcolor="#999290"></td>
+          <td>kg</td>
+        </tr>
+
+        <tr>
+          <td bgcolor="E8E5E4">vz 65 kts MCP</td>
+          <td>vz65</td>
+          <td>ft/Min</td>
+          <td>vz65</td>
+          <td>ft/min</td>
+          <td bgcolor="E8E5E4">MM PONCT training</td>
+          <td bgcolor="#999290"></td>
+          <td>kg</td>
+          <td bgcolor="#999290"></td>
+          <td>kg</td>
+        </tr>
+
+        <tr>
+          <td bgcolor="E8E5E4">vz 40 N-1</td>
+          <td>40 n-1</td>
+          <td>ft/min</td>
+          <td>40 n-1</td>
+          <td>ft/min</td>
+          <td bgcolor="E8E5E4" align="center">BI HES:</td>
+          <td colspan="2" bgcolor="E8E5E4" align="center">MASSE</td>
+          <td colspan="2" bgcolor="E8E5E4" align="center">ZP</td>
+        </tr>
+
+        <tr>
+          <td bgcolor="E8E5E4">vz 65 N-1</td>
+          <td>65 n-1</td>
+          <td>ft/min</td>
+          <td>65 n-1</td>
+          <td>ft/min</td>
+          <td bgcolor="E8E5E4" align="center">D/L</td>
+          <td></td>
+          <td>kg</td>
+          <td></td>
+          <td>ft</td>
+        </tr>
+
+        <tr>
+          <td bgcolor="E8E5E4">DA 50</td>
+          <td colspan="2" bgcolor="#999290"></td>
+          <td>DA50</td>
+          <td>m</td>
+          <td bgcolor="E8E5E4" align="CENTER">ZONE DE TRAVAIL</td>
+          <td></td>
+          <td>kg</td>
+          <td></td>
+          <td>ft</td>
+        </tr>
+      </tbody>
+    </table>
+    <button onclick="printHide()" id="print">Print</button>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <h1 style="background-color: cornflowerblue">Prépa IFR</h1>
+    <br /><br />
+    <!-- -------------------------------------------------------------------------------- -->
+
+    <table id="perfos_ifr">
+      <thead>
+        <tr>
+          <td colspan="8" align="center">PREPARATION PERFOS IFR</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="2"></td>
+          <td colspan="2">DEPART</td>
+          <td colspan="2">ARRIVEE</td>
+          <td colspan="2">DEGAGEMENT</td>
+        </tr>
+        <tr>
+          <td colspan="2">TERRAIN</td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <td rowspan="2">Minima MTO</td>
+          <td>VISI</td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <td>PLAFOND</td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <td colspan="2">Accessibilité (+/- 1h)</td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <td colspan="2">Masse</td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <td colspan="2">Centrage</td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <td colspan="2">T° / Zp</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td colspan="2">Mono DES</td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <td colspan="2">Vz à N / Pente %</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td colspan="2">Compatibilité déco</td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <td colspan="2">Vz à N-1 / Pente %</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td colspan="2">Compatibilité déco / API</td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <td colspan="2">D.A.A.</td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <td colspan="2">Panne décollage</td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <td colspan="2">Distance Arrêt</td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <td colspan="2">Alti de Rétab N-1</td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <script></script>
+  </body>
+  <body onload="importCG()"></body>
+</html>

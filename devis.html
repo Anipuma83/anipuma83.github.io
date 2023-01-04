@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>devis de masse 135</title>
+    <script src="devis.js"></script>
+    <script src="siegeInv.js"></script>
+    <link href="devis.css" rel="stylesheet" />
+  </head>
+  <div class="hamburger-menu">
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+
+    <ul class="menu__box">
+      <li><a class="menu__item" href="devis.html">Devis</a></li>
+      <li><a class="menu__item" href="index.html">Perfos</a></li>
+      <li><a class="menu__item" href="diagsLong.html">Cg Long</a></li>
+      <li><a class="menu__item" href="diagsLat.html">Cg Lat</a></li>
+      <!-- <li><a class="menu__item" href="#">Twitter</a></li> -->
+    </ul>
+  </div>
+  <body>
+    <div id="taccg">
+      <table id="CG">
+        <tr>
+          <td></td>
+          <td>Indicatifs :</td>
+          <td>
+            <input
+            type="list"
+              list="Indicatifs"
+              class="Indicatifs"
+              value="FZBGH"
+              onfocus="this.value=''"
+              onchange="numeroSerie()"
+            />
+            
+            <datalist id="Indicatifs">
+              <option>FZBGF</option>
+              <option>FZBGG</option>
+              <option>FZBGH</option>
+              <option>FZBGI</option>
+              <option>FZBGJ</option>
+            </datalist>
+          </td>
+          <td colspan="2"></td>
+
+          <td colspan="2" class="center">Mission</td>
+          <td>
+            <input
+              list="Mission"
+              class="Mission"
+              onfocus="this.value=''"
+              value="VIMAR"
+            />
+            <datalist id="Mission">
+              <option value="VIMAR"></option>
+              <option value="VITER"></option>
+              <option value="VTECH"></option>
+              <option value="VDTRE"></option>
+              <option value="MINST"></option>
+              <option value="MCO"></option>
+              <option value="AUTRE"></option>
+            </datalist>
+          </td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>Serial No.:</td>
+          <td></td>
+          <td></td>
+          <td colspan="2" class="center">Longitudinal</td>
+          <td colspan="2" class="center">Latéral</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2"></td>
+          <td>Masse</td>
+          <td>Bras</td>
+          <td>Moment</td>
+          <td>Bras</td>
+          <td>Moment</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">Masse à vide base</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">Pilote équipé</td>
+          <td>
+            <input class="masseInput" inputmode="numeric" value="90" />
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">Copilote équipé</td>
+          <td>
+            <input class="masseInput" inputmode="numeric" value="80" />
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">Opérateur côté gauche équipé</td>
+          <td>
+            <input
+              class="masseInput"
+              id="opG"
+              inputmode="numeric"
+              value=" 90"
+              defaultValue="90"
+            />
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">Opérateur côté droit équipé</td>
+          <td>
+            <input
+              class="masseInput"
+              id="opD"
+              inputmode="numeric"
+              value=" 90"
+              defaultValue="90"
+            />
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">Treuilliste équipé</td>
+          <td>
+            <input
+              class="masseInput"
+              value=""
+              inputmode="numeric"
+              value="0"
+              id="treuilliste"
+            />
+          </td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">Passager siège arrière droite</td>
+          <td>
+            <input
+              class="masseInput"
+              inputmode="numeric"
+              value="0"
+              id="paxARD"
+            />
+          </td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">Passager siège arrière central</td>
+          <td>
+            <input
+              class="masseInput"
+              inputmode="numeric"
+              value="0"
+              id="paxARC"
+            />
+          </td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">Passager siège arrière gauche</td>
+          <td>
+            <input
+              class="masseInput"
+              inputmode="numeric"
+              value="0"
+              id="paxARG"
+            />
+          </td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">Passager inversé droite</td>
+          <td>
+            <input
+              class="masseInput"
+              inputmode="numeric"
+              value="0"
+              id="paxInvD"
+            />
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">Passager inversé central</td>
+          <td>
+            <input
+              class="masseInput"
+              inputmode="numeric"
+              value="0"
+              id="paxInvC"
+            />
+            <!-- onfocus="this.value=''" -->
+            <!-- onchange="this.blur()" -->
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">Passager inversé gauche</td>
+          <td>
+            <input
+              class="masseInput"
+              inputmode="numeric"
+              value="0"
+              id="paxInvG"
+            />
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">
+            <input
+              list="Siège opérateur gauche"
+              class="large"
+              value="Siège opérateur AV gauche"
+              id="SOG"
+              onfocus="this.value=' '"
+              onchange="Opérateur_côté_gauche_équipé()"
+            />
+            <datalist id="Siège opérateur gauche">
+              <option value="Pas de siège opérateur gauche"></option>
+              <option value="Siège opérateur AV gauche"></option>
+              <option value="Siège opérateur AR gauche"></option>
+            </datalist>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">
+            <input
+              list="Siège opérateur droite"
+              class="large"
+              value="Siège opérateur AR droite"
+              id="SOD"
+              onfocus="this.value=' '"
+              onchange="Opérateur_côté_droit_équipé()"
+            />
+            <datalist id="Siège opérateur droite">
+              <option value="Pas de siège opérateur droite"></option>
+              <option value="Siège opérateur AV droite"></option>
+              <option value="Siège opérateur AR droite"></option>
+            </datalist>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">
+            <input
+              id="SA"
+              list="Sièges arrières"
+              class="large"
+              onfocus="this.value=''"
+              onchange="siegeArr() "
+            />
+            <datalist id="Sièges arrières">
+              <option value="Pas de siège AR"></option>
+              <option value="1 Siège AR droite"></option>
+              <option value="1 Siège AR centre"></option>
+              <option value="1 Siège AR gauche"></option>
+              <option value="2 Sièges AR droite et centre"></option>
+              <option value="2 Sièges AR gauche et centre"></option>
+              <option value="2 Sièges AR droite et gauche"></option>
+              <option value="3 Sièges AR"></option>
+            </datalist>
+          </td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">
+            <input
+              id="SAI"
+              list="Sièges inversés"
+              class="large"
+              onfocus="this.value=''"
+              onchange="siegeArrInv()"
+            />
+            <datalist id="Sièges inversés">
+              <option value="Pas de siège inversé"></option>
+              <option value="1 Siège inversé droite"></option>
+              <option value="1 Siège inversé centre"></option>
+              <option value="1 Siège inversé gauche"></option>
+              <option value="2 Sièges inversés droite et centre"></option>
+              <option value="2 Sièges inversés gauche et centre"></option>
+              <option value="2 Sièges inversés droite et gauche"></option>
+              <option value="3 Sièges inversés"></option>
+            </datalist>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">
+            <input
+              list="canot équipage"
+              class="large"
+              value="Canot équipage sur plancher"
+              onfocus="this.value=''"
+            />
+            <datalist id="canot équipage">
+              <option value="Pas de canot équipage"></option>
+              <option value="Canot équipage sur Rack"></option>
+              <option value="Canot équipage sur plancher"></option>
+            </datalist>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="checkbox"
+              class="check"
+              id="Chaîne SAR"
+              name="Chaîne SAR"
+              value="1"
+            />
+          </td>
+          <td colspan="2">Chaîne SAR</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="checkbox"
+              class="check"
+              id="Rack chaîne SAR"
+              name="Rack chaîne SAR"
+            />
+          </td>
+          <td colspan="2">Rack chaîne SAR</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="checkbox"
+              class="check"
+              id="TreuilDroit"
+              name="Treuil Droit"
+              value="1"
+            />
+          </td>
+          <td colspan="2">Treuil Droit</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="checkbox"
+              class="check"
+              id="TreuilGauche"
+              name="Treuil Gauche"
+              value="1"
+            />
+          </td>
+          <td colspan="2">Treuil Gauche</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="checkbox"
+              class="check"
+              id="FLOTTA"
+              name="FLOTTA"
+              checked
+              value="1"
+            />
+          </td>
+          <td colspan="2">FLOTTA</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="checkbox"
+              class="check"
+              id="Skis"
+              name="Skis"
+              value="1"
+            />
+          </td>
+          <td colspan="2">Skis</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="checkbox"
+              class="check"
+              id="FLIR_unité_Ext"
+              name="FLIR unité Ext."
+              value="1"
+            />
+          </td>
+          <td colspan="2">FLIR unité Ext.</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="checkbox"
+              class="check"
+              id="FLIR_unité_électronique"
+              name="FLIR unité électronique"
+              value="1"
+            />
+          </td>
+          <td colspan="2">FLIR unité électronique</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="checkbox"
+              class="check"
+              id="FLIR_rack_opérateur"
+              name="FLIR rack opérateur"
+              value="1"
+            />
+          </td>
+          <td colspan="2">FLIR rack opérateur</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="checkbox"
+              class="check"
+              id="SX_16"
+              name="SX 16"
+              value="1"
+            />
+          </td>
+          <td colspan="2">SX 16</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="checkbox"
+              class="check"
+              id="Ensemble_GETAC"
+              name="Ensemble GETAC"
+              checked
+              value="1"
+            />
+          </td>
+          <td colspan="2">Ensemble GETAC</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="checkbox"
+              class="check"
+              id="Lot_de_campement"
+              name="Lot de campement"
+              checked
+              value="1"
+            />
+          </td>
+          <td colspan="2">Lot de campement</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="checkbox"
+              class="check"
+              id="Lot_VIMAR"
+              name="Lot VIMAR"
+              checked
+              value="1"
+            />
+          </td>
+          <td colspan="2">Lot VIMAR</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td colspan="8"></td>
+        </tr>
+        <tr>
+          <td colspan="8"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">Bagage soute</td>
+          <td>
+            <input
+              class="masseInput"
+              inputmode="numeric"
+              id="bagage"
+              value="20"
+            />
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">Matériels divers cabine</td>
+          <td>
+            <input
+              class="masseInput"
+              name="Matériels_divers_cabine"
+              inputmode="numeric"
+              id="Matériels_divers_cabine"
+              value="20"
+            />
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr style="background-color: #ffff0024" ;>
+          <td></td>
+          <td>Masse zéro fuel</td>
+          <td>ZFM</td>
+          <td class="result"></td>
+          <td class="result"></td>
+          <td class="result"></td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td colspan="8"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">Nourrices</td>
+          <td>93.5</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">Réservoir</td>
+          <td>
+            <input class="masseInput" name="réservoir" inputmode="numeric" value=""/>
+          </td>
+          <td id="braTro"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr style="background-color: #ffd300">
+          <td></td>
+          <td>MASSE TOTALE</td>
+          <td>GM</td>
+          <td class="result"></td>
+          <td class="result"></td>
+          <td class="result"></td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">Consommation carburant</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr style="background-color: #ffd300">
+          <td></td>
+          <td>Masse atterrissage</td>
+          <td class="result"></td>
+          <td class="result"></td>
+          <td class="result"></td>
+          <td class="result"></td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td colspan="8"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">CONSOMMATION HORAIRE</td>
+          <td colspan="3">Durée MISION:</td>
+          <td colspan="2">
+            <input
+              list="Durée MISION"
+              class="small"
+              id="durée"
+              value="2H00"
+              onfocus="this.value=''"
+            />
+            <datalist id="Durée MISION">
+              <option value="0H15"></option>
+              <option value="0H30"></option>
+              <option value="0H45"></option>
+              <option value="1H00"></option>
+              <option value="1H15"></option>
+              <option value="1H30"></option>
+              <option value="1H45"></option>
+              <option value="2H00"></option>
+              <option value="2H15"></option>
+              <option value="2H30"></option>
+            </datalist>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">
+            <input list="consoHor" class="consoHor" value="200" id="ConsoH" />
+            <datalist id="consoHor">
+              <option value="210"></option>
+              <option value="200"></option>
+              <option value="190"></option>
+              <option value="180"></option>
+              <option value="170"></option>
+              <option value="160"></option>
+            </datalist>
+          </td>
+          <td colspan="3">Conso Mission:</td>
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <td colspan="8"></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td colspan="2"></td>
+          <td colspan="3">Emport carburant maximum:</td>
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2"></td>
+          <td colspan="3">Emport carburant restant:</td>
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="8"></td>
+        </tr>
+      </table>
+      <script></script>
+    </div>
+    <div> <button id="calcs" onclick="initParam()" class="btncalcs">Valider</button>
+
+    <input
+      type="button"
+      id="perfos"
+      class="btnTr0"
+      
+      onfocus="inputKROMax()"
+      value="TR0 max?"
+    /></div>
+   
+  </body>
+  <script>
+    document.addEventListener("change", initParam);
+  </script>
+  <body
+    onload="importloc();FLOTTA();numeroSerie();siegeArrInv();siegeArr();treuilliste();initParam(); Opérateur_côté_droit_équipé(); Opérateur_côté_gauche_équipé();importloc();"
+  ></body>
+
+  <!-- <body onload="treuilliste()"></body> -->
+
+  <!-- <body onload="initParam()"></body> -->
+</html>

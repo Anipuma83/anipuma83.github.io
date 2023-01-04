@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+
+    <title>Centrage longitudinal</title>
+  </head>
+  <body>
+    <div class="hamburger-menu">
+      <input id="menu__toggle" type="checkbox" />
+      <label class="menu__btn" for="menu__toggle">
+        <span></span>
+      </label>
+  
+      <ul class="menu__box">
+        <li><a class="menu__item" href="devis.html">Devis</a></li>
+        <li><a class="menu__item" href="index.html">Perfos</a></li>
+        <li><a class="menu__item" href="diagsLong.html">Cg Long</a></li>
+        <li><a class="menu__item" href="diagsLat.html">Cg Lat</a></li>
+        <!-- <li><a class="menu__item" href="#">Twitter</a></li> -->
+      </ul>
+    </div>
+    <!-- <div class="chartCard"> -->
+    <div class="chartBox">
+      <canvas id="myChart"></canvas>
+    </div>
+    <!-- </div> -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/chart.js"
+    ></script>
+    <script>
+      function importCG() {
+        getZFM = localStorage.getItem("ZFM");
+        getbrasTotal = localStorage.getItem("brasTotal");
+        getbrasAtt = localStorage.getItem("brasAtt");
+        getbraszerofuel = localStorage.getItem("braszerofuel");
+        getMasseTotale = localStorage.getItem("MasseTotale");
+        getMasseAtt = localStorage.getItem("MasseAtt");
+        getMasseDeg = localStorage.getItem("MasseDeg");
+        getreservoirP = localStorage.getItem("reservoirP");
+        getdurée = localStorage.getItem("durée");
+        console.log(getZFM);
+      }
+
+      getZFM = localStorage.getItem("ZFM");
+      getbrasTotal = localStorage.getItem("brasTotal");
+      getbrasAtt = localStorage.getItem("brasAtt");
+      getbraszerofuel = localStorage.getItem("braszerofuel");
+      getMasseTotale = localStorage.getItem("MasseTotale");
+      getMasseAtt = localStorage.getItem("MasseAtt");
+      getMasseDeg = localStorage.getItem("MasseDeg");
+      getreservoirP = localStorage.getItem("reservoirP");
+      getdurée = localStorage.getItem("durée");
+      console.log(getZFM);
+      const data = {
+        datasets: [
+          {
+            label: " centrage",
+            // data: [18, 12, 6, 9, 12, 3, 9],
+            data: [
+              { x: getbrasTotal, y: getMasseTotale },
+              { x: getbrasAtt, y: getMasseAtt },
+              { x: getbraszerofuel, y: getZFM },
+            ],
+            backgroundColor: ["rgba(255, 26, 104, 0.2)"],
+            borderColor: ["rgba(255, 54, 55, 1)"],
+            borderWidth: 1,
+            showLine: true,
+          },
+          {
+            label: "epure",
+            data: [
+              { x: 4369, y: 2910 },
+              { x: 4555, y: 1600 },
+              { x: 4187, y: 2000 },
+              { x: 4227, y: 2910 },
+              { x: 4369, y: 2910 },
+            ],
+
+            backgroundColor: ["rgba(255, 26, 104, 0.2)"],
+            borderColor: ["rgba(61, 80, 183, 0.8)"],
+            borderWidth: 1,
+            showLine: true,
+          },
+        ],
+      };
+
+      // config
+      const config = {
+        type: "scatter",
+        data,
+        options: {
+          scales: {
+            x: {
+              beginAtZero: false,
+            },
+            y: {
+              beginAtZero: false,
+              beginAt: 2300,
+            },
+          },
+        },
+      };
+
+      // render init block
+      const myChart = new Chart(document.getElementById("myChart"), config);
+    </script>
+  </body>
+  <body onload="importCG()"></body>
+</html>
