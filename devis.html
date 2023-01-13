@@ -20,11 +20,12 @@
       <li><a class="menu__item" href="index.html">Perfos</a></li>
       <li><a class="menu__item" href="diagsLong.html">Cg Long</a></li>
       <li><a class="menu__item" href="diagsLat.html">Cg Lat</a></li>
-      <!-- <li><a class="menu__item" href="#">Twitter</a></li> -->
+      <li><button id="calcs" onclick="initParam()" class="btncalcs">Valider</button></li>
+      <li><button id="troMax" onclick="inputKROMax()" class="btnTr0 ">Plein Max</li>
     </ul>
   </div>
   <body>
-    <div id="taccg">
+    <div id="taccg" class="taccg">
       <table id="CG">
         <tr>
           <td></td>
@@ -32,9 +33,10 @@
           <td>
             <input
             type="list"
+            name="Indicatifs"
               list="Indicatifs"
               class="Indicatifs"
-              value="FZBGH"
+              
               onfocus="this.value=''"
               onchange="numeroSerie()"
             />
@@ -53,9 +55,9 @@
           <td>
             <input
               list="Mission"
+              name="Mission"
               class="Mission"
               onfocus="this.value=''"
-              value="VIMAR"
             />
             <datalist id="Mission">
               <option value="VIMAR"></option>
@@ -99,7 +101,7 @@
           <td></td>
           <td colspan="2">Pilote équipé</td>
           <td>
-            <input class="masseInput" inputmode="numeric" value="90" />
+            <input type="number" id="Pilote équipé" class="masseInput" inputmode="numeric" value="90"/>
           </td>
           <td></td>
           <td></td>
@@ -110,7 +112,7 @@
           <td></td>
           <td colspan="2">Copilote équipé</td>
           <td>
-            <input class="masseInput" inputmode="numeric" value="80" />
+            <input type="number" class="masseInput" inputmode="numeric" value="80" id="Copilote équipé"/>
           </td>
           <td></td>
           <td></td>
@@ -122,11 +124,11 @@
           <td colspan="2">Opérateur côté gauche équipé</td>
           <td>
             <input
+              type="number"
               class="masseInput"
               id="opG"
               inputmode="numeric"
-              value=" 90"
-              defaultValue="90"
+              value="90"
             />
           </td>
           <td></td>
@@ -138,12 +140,12 @@
           <td></td>
           <td colspan="2">Opérateur côté droit équipé</td>
           <td>
-            <input
+            <input 
+              type="number"
               class="masseInput"
               id="opD"
               inputmode="numeric"
-              value=" 90"
-              defaultValue="90"
+              value="90"
             />
           </td>
           <td></td>
@@ -156,6 +158,7 @@
           <td colspan="2">Treuilliste équipé</td>
           <td>
             <input
+            type="number"
               class="masseInput"
               value=""
               inputmode="numeric"
@@ -173,6 +176,7 @@
           <td colspan="2">Passager siège arrière droite</td>
           <td>
             <input
+            type="number"
               class="masseInput"
               inputmode="numeric"
               value="0"
@@ -189,6 +193,7 @@
           <td colspan="2">Passager siège arrière central</td>
           <td>
             <input
+            type="number"
               class="masseInput"
               inputmode="numeric"
               value="0"
@@ -205,6 +210,7 @@
           <td colspan="2">Passager siège arrière gauche</td>
           <td>
             <input
+            type="number"
               class="masseInput"
               inputmode="numeric"
               value="0"
@@ -221,6 +227,7 @@
           <td colspan="2">Passager inversé droite</td>
           <td>
             <input
+            type="number"
               class="masseInput"
               inputmode="numeric"
               value="0"
@@ -237,13 +244,13 @@
           <td colspan="2">Passager inversé central</td>
           <td>
             <input
+            type="number"
               class="masseInput"
               inputmode="numeric"
               value="0"
               id="paxInvC"
             />
-            <!-- onfocus="this.value=''" -->
-            <!-- onchange="this.blur()" -->
+            
           </td>
           <td></td>
           <td></td>
@@ -255,6 +262,7 @@
           <td colspan="2">Passager inversé gauche</td>
           <td>
             <input
+            type="number"
               class="masseInput"
               inputmode="numeric"
               value="0"
@@ -271,6 +279,7 @@
           <td colspan="2">
             <input
               list="Siège opérateur gauche"
+              name="Siège opérateur gauche"
               class="large"
               value="Siège opérateur AV gauche"
               id="SOG"
@@ -294,6 +303,7 @@
           <td colspan="2">
             <input
               list="Siège opérateur droite"
+              name="Siège opérateur droite"
               class="large"
               value="Siège opérateur AR droite"
               id="SOD"
@@ -318,6 +328,7 @@
             <input
               id="SA"
               list="Sièges arrières"
+              name="Sièges arrières"
               class="large"
               onfocus="this.value=''"
               onchange="siegeArr() "
@@ -346,6 +357,7 @@
             <input
               id="SAI"
               list="Sièges inversés"
+              name="Sièges inversés"
               class="large"
               onfocus="this.value=''"
               onchange="siegeArrInv()"
@@ -372,6 +384,7 @@
           <td colspan="2">
             <input
               list="canot équipage"
+              name="canot équipage"
               class="large"
               value="Canot équipage sur plancher"
               onfocus="this.value=''"
@@ -395,7 +408,6 @@
               class="check"
               id="Chaîne SAR"
               name="Chaîne SAR"
-              value="1"
             />
           </td>
           <td colspan="2">Chaîne SAR</td>
@@ -462,8 +474,7 @@
               class="check"
               id="FLOTTA"
               name="FLOTTA"
-              checked
-              value="1"
+              
             />
           </td>
           <td colspan="2">FLOTTA</td>
@@ -480,7 +491,6 @@
               class="check"
               id="Skis"
               name="Skis"
-              value="1"
             />
           </td>
           <td colspan="2">Skis</td>
@@ -497,7 +507,6 @@
               class="check"
               id="FLIR_unité_Ext"
               name="FLIR unité Ext."
-              value="1"
             />
           </td>
           <td colspan="2">FLIR unité Ext.</td>
@@ -514,7 +523,6 @@
               class="check"
               id="FLIR_unité_électronique"
               name="FLIR unité électronique"
-              value="1"
             />
           </td>
           <td colspan="2">FLIR unité électronique</td>
@@ -531,7 +539,6 @@
               class="check"
               id="FLIR_rack_opérateur"
               name="FLIR rack opérateur"
-              value="1"
             />
           </td>
           <td colspan="2">FLIR rack opérateur</td>
@@ -548,7 +555,7 @@
               class="check"
               id="SX_16"
               name="SX 16"
-              value="1"
+              
             />
           </td>
           <td colspan="2">SX 16</td>
@@ -565,8 +572,6 @@
               class="check"
               id="Ensemble_GETAC"
               name="Ensemble GETAC"
-              checked
-              value="1"
             />
           </td>
           <td colspan="2">Ensemble GETAC</td>
@@ -583,8 +588,7 @@
               class="check"
               id="Lot_de_campement"
               name="Lot de campement"
-              checked
-              value="1"
+              
             />
           </td>
           <td colspan="2">Lot de campement</td>
@@ -601,8 +605,7 @@
               class="check"
               id="Lot_VIMAR"
               name="Lot VIMAR"
-              checked
-              value="1"
+              
             />
           </td>
           <td colspan="2">Lot VIMAR</td>
@@ -623,6 +626,7 @@
           <td colspan="2">Bagage soute</td>
           <td>
             <input
+            type="number"
               class="masseInput"
               inputmode="numeric"
               id="bagage"
@@ -639,6 +643,7 @@
           <td colspan="2">Matériels divers cabine</td>
           <td>
             <input
+            type="number"
               class="masseInput"
               name="Matériels_divers_cabine"
               inputmode="numeric"
@@ -667,7 +672,7 @@
         <tr>
           <td></td>
           <td colspan="2">Nourrices</td>
-          <td>93.5</td>
+          <td></td>
           <td></td>
           <td></td>
           <td></td>
@@ -677,7 +682,7 @@
           <td></td>
           <td colspan="2">Réservoir</td>
           <td>
-            <input class="masseInput" name="réservoir" inputmode="numeric" value=""/>
+            <input type="number" class="masseInput" name="réservoir" inputmode="numeric" value=""/>
           </td>
           <td id="braTro"></td>
           <td></td>
@@ -705,7 +710,7 @@
         </tr>
         <tr style="background-color: #ffd300">
           <td></td>
-          <td>Masse atterrissage</td>
+          <td>MASSE ATTERRISSAGE</td>
           <td class="result"></td>
           <td class="result"></td>
           <td class="result"></td>
@@ -719,10 +724,11 @@
         <tr>
           <td></td>
           <td colspan="2">CONSOMMATION HORAIRE</td>
-          <td colspan="3">Durée MISION:</td>
+          <td colspan="3">Durée MISSION:</td>
           <td colspan="2">
             <input
               list="Durée MISION"
+              name="Durée MISION"
               class="small"
               id="durée"
               value="2H00"
@@ -745,7 +751,12 @@
         <tr>
           <td></td>
           <td colspan="2">
-            <input list="consoHor" class="consoHor" value="200" id="ConsoH" />
+            <input list="consoHor" 
+            name="consoHor"
+            class="consoHor" 
+            value="200" 
+            id="ConsoH" 
+            />
             <datalist id="consoHor">
               <option value="210"></option>
               <option value="200"></option>
@@ -781,26 +792,16 @@
       </table>
       <script></script>
     </div>
-    <div> <button id="calcs" onclick="initParam()" class="btncalcs">Valider</button>
-
-    <input
-      type="button"
-      id="perfos"
-      class="btnTr0"
-      
-      onfocus="inputKROMax()"
-      value="TR0 max?"
-    /></div>
+   
    
   </body>
   <script>
     document.addEventListener("change", initParam);
   </script>
   <body
-    onload="importloc();FLOTTA();numeroSerie();siegeArrInv();siegeArr();treuilliste();initParam(); Opérateur_côté_droit_équipé(); Opérateur_côté_gauche_équipé();importloc();"
+    onload="locload();locsave();importloc();FLOTTA();numeroSerie();siegeArrInv();siegeArr();treuilliste();
+    initParam(); Opérateur_côté_droit_équipé(); Opérateur_côté_gauche_équipé();"
   ></body>
 
-  <!-- <body onload="treuilliste()"></body> -->
 
-  <!-- <body onload="initParam()"></body> -->
 </html>

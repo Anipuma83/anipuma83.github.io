@@ -1,0 +1,59 @@
+body{
+  font-family: 'Trebuchet MS';
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  text-shadow: 1px 1PX 1px rgba(0, 0, 0, 0,5)
+}
+
+h1{
+  font-size: 3em;
+}
+
+i.wi{
+  font-size: 5em;
+  line-height: 3em;
+}
+
+h2{
+  font-size: 2em;
+}
+
+.tooltip{
+opacity: 0;
+position: absolute;
+top: 100px;
+left: 250px;
+color: #fff;
+background-color: #222;
+border-radius: 5px;
+padding: 10px;
+font-size: 25px;
+transition: opacity .3s,top .5s; 
+ 
+
+}
+
+h1:hover .tooltip{
+  top: 50px;
+  opacity: 1;
+}
+.clear{
+  background-image: url(https://img.freepik.com/photos-gratuite/ciel-bleu-fantastique_1203-1929.jpg);
+}
+.clouds{
+  background-image: 
+  url(https://img.freepik.com/photos-gratuite/pluie-noire-abstraite-sombre-puissance_1127-2380.jpg?t=st=1672362177~exp=1672362777~hmac=355b24aecc708478c1c32b0fef2494d52295400688307041325b8873d07ee896);
+}
+.rain{
+  background-image: url();
+}
+.snow{
+  background-image: url();
+}

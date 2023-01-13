@@ -1,0 +1,131 @@
+token api meteo concept:
+cb8ddff5cdcceb672840dd564058b3fdf40dbd83d275d0e2acc4a254749270fe
+
+apikey ninjasAPI
+
+
+api metar
+2a0636ad72bf43ae8347af7ba7
+
+fetch('https://api.trade.gov/gateway/v1/consolidated_screening_list/search?q=Michael', {
+  headers: { 'Authorization': 'Bearer ' + yourAccessTokenHere }
+})
+	
+
+
+liste pour local localStorage
+
+#Indicatifs
+document.querySelector("#CG > tbody > tr:nth-child(1) > td:nth-child(3) > input")
+
+#Mission
+document.querySelector("#CG > tbody > tr:nth-child(1) > td:nth-child(6) > input")
+
+#Pilote équipé
+document.querySelector("#CG > tbody > tr:nth-child(5) > td:nth-child(3) > input")
+
+#Copilote équipé
+document.querySelector("#Copilote\\ équipé")
+
+#opG (Opérateur_côté_gauche_équipé)
+document.querySelector("#opG")
+
+#opD (Opérateur_côté_droit_équipé)
+document.querySelector("#opD")
+
+#treuilliste
+document.querySelector("#treuilliste")
+
+#paxARD
+document.querySelector("#paxARD")
+
+#paxARC
+document.querySelector("#paxARC")
+
+#paxARG
+document.querySelector("#paxARG")
+
+#paxInvD
+document.querySelector("#paxInvD")
+
+#paxInvC
+document.querySelector("#paxInvC")
+
+#paxInvG
+document.querySelector("#paxInvG")
+
+#SOG
+document.querySelector("#SOG")
+
+#SOD
+document.querySelector("#SOD")
+
+
+#SA
+document.querySelector("#SA")
+
+#SAI
+document.querySelector("#SAI")
+
+#canot
+document.querySelector("#CG > tbody > tr:nth-child(20) > td:nth-child(2) > input")
+
+#Chaîne_SAR
+document.querySelector("#Chaîne\\ SAR")
+
+#Rack_chaîne_SAR
+document.querySelector("#Rack\\ chaîne\\ SAR")
+
+#treuil_droit
+document.querySelector("#TreuilDroit")
+
+#treuil_gauche
+document.querySelector("#TreuilGauche")
+
+#FLOTTA
+document.querySelector("#FLOTTA")
+
+#Skis
+document.querySelector("#Skis")
+
+#FLIR_unité_Ext
+document.querySelector("#FLIR_unité_Ext")
+
+#FLIR_unité_électronique
+document.querySelector("#FLIR_unité_électronique")            
+
+#FLIR_rack_opérateur
+document.querySelector("#FLIR_rack_opérateur")
+
+#SX_16
+document.querySelector("#SX_16")
+
+#Ensemble_GETAC
+document.querySelector("#Ensemble_GETAC")
+
+#Lot_de_campement
+document.querySelector("#Lot_de_campement")
+
+#Lot_VIMAR
+document.querySelector("#Lot_VIMAR")
+
+Bagage
+document.querySelector("#bagage")
+
+divers
+document.querySelector("#Matériels_divers_cabine")
+
+nourrices
+
+
+reservoirP
+document.querySelector("#CG > tbody > tr:nth-child(41) > td:nth-child(3) > input")
+
+#Durée MISION
+document.querySelector("#durée")
+
+
+
+
+
+

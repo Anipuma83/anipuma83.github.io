@@ -1,0 +1,37 @@
+
+MasseAtt: "2496"
+
+MasseDeg: "2452"
+
+MasseTotale: "2896"
+
+
+
+
+
+
+
+
+ZFM: "2358.3799999999997"
+
+[object HTMLInputElement]: "true"
+
+brasAtt: "4308.136818910257"
+
+brasLatAtt: "-0.70"
+
+brasLatMasseTotale: "-0.60"
+brasLatZFM: ""
+brasTotal: "4291"
+braszerofuel: "4281"
+
+consoHor: "200"
+
+etatSx16: 
+"true"
+on
+: 
+"true"
+reservoirP
+: 
+"444"

@@ -19,38 +19,38 @@ th,td{
   padding: 10px;
 }
 
-#print {
-  position: fixed;
-  top: 90%; left: 25%;
-  display: block;
-  padding: 15px 40px;
-  font-size: 30px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #faac05;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
+.print {
+  position: sticky;
+    top: 100%; left: 60%;
+    display: block;
+    padding: 15px 40px;
+    font-size: 30px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #faac05;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
 }
 
-#calculs{
-  position: fixed;
-  top: 90%; left: 1%;
-  display: block;
-  padding: 15px 40px;
-  font-size: 30px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #faac05;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
+.calculs{
+  position: sticky;
+    top: 100%; left: 60%;
+    display: block;
+    padding: 15px 40px;
+    font-size: 30px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #faac05;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
 }
 
 button:hover {background-color: #f30b0b}
@@ -251,6 +251,7 @@ input[name="ventiddeg"] {
   background-color: #ECEFF1;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
   transition-duration: .25s;
+  z-index: 0;
 }
 .menu__item {
   display: block;

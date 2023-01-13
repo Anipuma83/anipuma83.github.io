@@ -28915,8 +28915,8 @@ function vz65N1() {
 
 function printHide() {
 
-    document.querySelector("#print").style.visibility = "hidden"
-    document.querySelector("#calculs").style.visibility = "hidden"
+    // document.querySelector("#print").style.visibility = "hidden"
+    // document.querySelector("#calculs").style.visibility = "hidden"
     document.querySelector("body > div").style.visibility = "hidden"
 
     setInterval(window.print(), 10000)

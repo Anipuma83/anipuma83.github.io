@@ -1,25 +1,155 @@
+
+
+function locload(){
+
+    const checkboxes= document.querySelectorAll('input[type=checkbox]')
+
+let etatIndicatifs  =(localStorage.getItem("Indicatifs"));
+let etatMission  =(localStorage.getItem("Mission"));
+let etatPilote_équipé  =JSON.parse(localStorage.getItem("Pilote équipé"));
+let etatCopilote_équipé  =JSON.parse(localStorage.getItem("Copilote équipé"));
+let etatopD  =JSON.parse(localStorage.getItem("opD"));
+let etatopG =JSON.parse(localStorage.getItem("opG"));
+let etattreuilliste  =JSON.parse(localStorage.getItem("treuilliste"));
+let etatpaxARC  =JSON.parse(localStorage.getItem("paxARC"));
+let etatpaxARD  =JSON.parse(localStorage.getItem("paxARD"));
+let etatpaxARG  =JSON.parse(localStorage.getItem("paxARG"));
+let etatpaxInvC  =JSON.parse(localStorage.getItem("paxInvC"));
+let etatpaxInvD  =JSON.parse(localStorage.getItem("paxInvD"));
+let etatpaxInvG  =JSON.parse(localStorage.getItem("paxInvG"));
+let etatSiège_opérateur_droite  =(localStorage.getItem("Siège opérateur droite"));
+let etatSiège_opérateur_gauche =(localStorage.getItem("Siège opérateur gauche"));
+let etatSièges_arrières  =(localStorage.getItem("Sièges arrières"));
+let etatSièges_inversés =(localStorage.getItem("Sièges inversés"));
+let etatcanot_équipage =(localStorage.getItem("canot équipage"));
+let etatChaîne_SAR  =JSON.parse(localStorage.getItem("Chaîne SAR"));
+let etatRack_chaîne_SAR = JSON.parse(localStorage.getItem ("Rack chaîne SAR"))
+let etatTreuil_Droit  =JSON.parse(localStorage.getItem("Treuil Droit"));
+let etatTreuil_Gauche =JSON.parse(localStorage.getItem("Treuil Gauche"));   
+let etatFLOTTA  =JSON.parse(localStorage.getItem("FLOTTA"));
+let etatskis = JSON.parse(localStorage.getItem("Skis"));
+let etatFLIR_rack_opérateur  =JSON.parse(localStorage.getItem("FLIR rack opérateur"));
+let etatFLIR_unité_Ext  =JSON.parse(localStorage.getItem("FLIR unité Ext"));
+let etatFLIR_unité_électronique =JSON.parse(localStorage.getItem("FLIR unité électronique"));
+let etatSX_16  =JSON.parse(localStorage.getItem("SX 16"));
+let etatEnsemble_GETAC  =JSON.parse(localStorage.getItem("Ensemble GETAC"));
+let etatLot_de_campement  =JSON.parse(localStorage.getItem("Lot de campement"));
+let etatLot_VIMAR  =JSON.parse(localStorage.getItem("Lot VIMAR"));
+let etatbagage  =JSON.parse(localStorage.getItem("bagage"));
+let etatMatériels_divers_cabine  =JSON.parse(localStorage.getItem("Matériels_divers_cabine"));
+let etatreservoirP =JSON.parse(localStorage.getItem("reservoirP"));
+let etatdureeMission = (localStorage.getItem("Durée MISION"))
+
+document.querySelector("#CG > tbody > tr:nth-child(1) > td:nth-child(3) > input").value = etatIndicatifs
+document.querySelector("#CG > tbody > tr:nth-child(1) > td:nth-child(6) > input").value = etatMission
+document.querySelector("#CG > tbody > tr:nth-child(5) > td:nth-child(3) > input").value = etatPilote_équipé
+document.querySelector("#Copilote\\ équipé").value = etatCopilote_équipé
+document.querySelector("#opG").value = etatopG
+document.querySelector("#opD").value = etatopD
+document.querySelector("#treuilliste").value = etattreuilliste
+document.querySelector("#paxARD").value = etatpaxARD
+document.querySelector("#paxARC").value = etatpaxARC
+document.querySelector("#paxARG").value = etatpaxARG
+document.querySelector("#paxInvD").value = etatpaxInvD
+document.querySelector("#paxInvC").value = etatpaxInvC
+document.querySelector("#paxInvG").value = etatpaxInvG
+document.querySelector("#SOD").value = etatSiège_opérateur_droite
+document.querySelector("#SOG").value = etatSiège_opérateur_gauche
+document.querySelector("#SA").value = etatSièges_arrières
+document.querySelector("#SAI").value = etatSièges_inversés
+document.querySelector("#CG > tbody > tr:nth-child(20) > td:nth-child(2) > input").value = etatcanot_équipage
+document.querySelector("#Rack\\ chaîne\\ SAR").value = etatRack_chaîne_SAR
+document.querySelector("#Chaîne\\ SAR").checked = etatChaîne_SAR
+document.querySelector("#TreuilDroit").checked = etatTreuil_Droit
+document.querySelector("#TreuilGauche").checked = etatTreuil_Gauche
+document.querySelector("#FLOTTA").checked = etatFLOTTA
+document.querySelector("#Skis").checked = etatskis
+document.querySelector("#FLIR_unité_Ext").checked = etatFLIR_unité_Ext
+document.querySelector("#FLIR_unité_électronique").checked = etatFLIR_unité_électronique            
+document.querySelector("#FLIR_rack_opérateur").checked = etatFLIR_rack_opérateur
+document.querySelector("#SX_16").checked = etatSX_16
+document.querySelector("#Ensemble_GETAC").checked = etatEnsemble_GETAC
+document.querySelector("#Lot_de_campement").checked = etatLot_de_campement
+document.querySelector("#Lot_VIMAR").checked = etatLot_VIMAR
+document.querySelector("#bagage").value = etatbagage
+document.querySelector("#Matériels_divers_cabine").value = etatMatériels_divers_cabine
+document.querySelector("#CG > tbody > tr:nth-child(41) > td:nth-child(3) > input").value = etatreservoirP
+document.querySelector("#durée").value = etatdureeMission
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// if (typeof(etatskis) != undefined ) {
+//     // console.log(typeof(etatskis));
+//     document.querySelector("#Skis").checked = etatskis;
+//     // console.log("skis " + etatskis);}
+
+// let checkedornot = JSON.parse(localStorage.getItem("SX 16"));
+
+//     if (checkedornot !=0) {document.querySelector("#SX_16").checked = checkedornot}
+// }
+}
+
 function importloc(){
     
     let reservoirP = localStorage.getItem("reservoirP")
-    let getdurée  =localStorage.getItem("durée" );
-
-    // console.log(document.querySelector("#CG > tbody:nth-child(1) > tr:nth-child(41) > td:nth-child(3) > input:nth-child(1)").value=="")
+    // let getdurée  =localStorage.getItem("durée" );
 
     if (document.querySelector("#CG > tbody:nth-child(1) > tr:nth-child(41) > td:nth-child(3) > input:nth-child(1)").value=="") {
    document.querySelector(" #CG > tbody:nth-child(1) > tr:nth-child(41) > td:nth-child(3) > input:nth-child(1)").value=Number(reservoirP)
-   console.log(Number(reservoirP))
+//    console.log(Number(reservoirP))
    if (Number(reservoirP)==0) {
     document.querySelector("#CG > tbody:nth-child(1) > tr:nth-child(41) > td:nth-child(3) > input:nth-child(1)").innerHTML="0"
    }
         }
         else{
             document.querySelector(" #CG > tbody:nth-child(1) > tr:nth-child(41) > td:nth-child(3) > input:nth-child(1)").value=Number(reservoirP)
-            console.log(reservoirP)
+            // console.log(reservoirP)
         }
-    
-
+        
 }
 
+function locsave() {
+
+const checkboxes= document.querySelectorAll('input[type=checkbox]')
+
+
+for (let i = 0; i < checkboxes.length; i++) {
+    
+    localStorage.setItem(checkboxes[i].name,checkboxes[i].checked)
+}
+
+const inputBoxes = document.querySelectorAll('input[list]')
+
+for (let i = 0; i < inputBoxes.length; i++) {
+
+   localStorage.setItem (inputBoxes[i].name, inputBoxes[i].value)
+    // console.log(inputBoxes[i].name);
+}
+
+const inputmasses = document.querySelectorAll('input[type=number]')
+
+for (let i = 0; i < inputmasses.length; i++) {
+   localStorage.setItem (inputmasses[i].id, inputmasses[i].value)
+//    console.log(inputmasses[i].id);
+    
+}
+
+ }
+
+window.addEventListener('change', locsave);
 
 function initParam() {
     numeroSerie()
@@ -56,28 +186,17 @@ function initParam() {
     zerofuelmoment()
     setdate()
     importloc()
+    locsave()
 
 
 
 }
-
+ 
 function numeroSerie() {
-    // if (document.querySelector("#CG > tbody > tr:nth-child(1) > td:nth-child(3) > input").value= " ") {
-    //     document.querySelector("#CG > tbody > tr:nth-child(1) > td:nth-child(3) > input").value="FZBGH"
-    // }
    
     numser = document.querySelector("#CG > tbody > tr:nth-child(1) > td:nth-child(3) > input").value
 
-    // document.querySelector("#CG > tbody > tr:nth-child(2) > td:nth-child(3)").innerHTML
-    // document.querySelector("#CG > tbody > tr:nth-child(1) > td:nth-child(3) > input")
-
-    // if (numser == "") {
-
-    //     numser = "FZBGH"
-    //     document.querySelector("#CG > tbody > tr:nth-child(2) > td:nth-child(3)").innerHTML = "525"
-    // }
-
-
+   
     if (numser == "FZBGF") {
         document.querySelector("#CG > tbody > tr:nth-child(2) > td:nth-child(3)").innerHTML = "507";
         // console.log("succes");
@@ -210,10 +329,8 @@ function Opérateur_côté_gauche_équipé() {
 
     if (document.querySelector("#SOG").value == "Siège opérateur AV gauche") {
 
-        document.querySelector("#opG")
-        // document.querySelector("#opG").value = 0
+        // document.querySelector("#opG")
 
-        // document.querySelector("#CG > tbody > tr:nth-child(7)").removeAttribute("style", "display:none")
         document.querySelector("#CG > tbody > tr:nth-child(7)").setAttribute("style", "background-color: white")
 
         document.querySelector("#CG > tbody > tr:nth-child(7) > td:nth-child(4)").innerHTML = 3684
@@ -230,7 +347,6 @@ function Opérateur_côté_gauche_équipé() {
 
     if (document.querySelector("#SOG").value == "Siège opérateur AR gauche") {
 
-        // document.querySelector("#opG").value = 0
         document.querySelector("#CG > tbody > tr:nth-child(7)").setAttribute("style", "background-color: white")
 
         document.querySelector("#CG > tbody > tr:nth-child(7) > td:nth-child(4)").innerHTML = 4223
@@ -253,7 +369,6 @@ function Opérateur_côté_droit_équipé() {
 
     if (document.querySelector("#SOD").value == "Pas de siège opérateur droite") {
 
-        // alert("passe de siege opérteur à droite")
         document.getElementById(id = "opD").value = 0
 
         document.querySelector("#CG > tbody > tr:nth-child(8)").setAttribute("style", "display:none")
@@ -265,7 +380,6 @@ function Opérateur_côté_droit_équipé() {
         document.querySelector("#CG > tbody > tr:nth-child(17) > td:nth-child(6)").innerHTML = 0
         document.querySelector("#CG > tbody > tr:nth-child(17) > td:nth-child(7)").innerHTML = 0
 
-        // document.querySelector("#CG > tbody > tr:nth-child(8) > td:nth-child(3)").innerHTML = "0"
         document.querySelector("#CG > tbody > tr:nth-child(8) > td:nth-child(4)").innerHTML = 0
         document.querySelector("#CG > tbody > tr:nth-child(8) > td:nth-child(5)").innerHTML = 0
         document.querySelector("#CG > tbody > tr:nth-child(8) > td:nth-child(6)").innerHTML = 0
@@ -275,7 +389,6 @@ function Opérateur_côté_droit_équipé() {
 
     if (document.querySelector("#SOD").value == "Siège opérateur AR droite") {
 
-        // document.getElementById(id = "opD").value = 0
         document.querySelector("#CG > tbody > tr:nth-child(8)").setAttribute("style", "background-color: white")
 
 
@@ -293,7 +406,6 @@ function Opérateur_côté_droit_équipé() {
 
     if (document.querySelector("#SOD").value == "Siège opérateur AV droite") {
         document.querySelector("#SOD")
-        // document.getElementById(id = "opD").value = 0
         document.querySelector("#CG > tbody > tr:nth-child(8)").setAttribute("style", "background-color: white")
 
 
@@ -318,15 +430,11 @@ function treuilliste() {
         ["Treuilliste gauche équipé", 90, 3600, 324000, -950, 85500],
     ]
 
-    // console.log(document.querySelector("#CG > tbody > tr:nth-child(9) > td:nth-child(3) > input").value);
 
-    // console.log(masseTreuilliste);
     TreuilDroit = document.querySelector("#TreuilDroit").checked
     TreuilGauche = document.querySelector("#TreuilGauche").checked
 
-    // console.log(TreuilDroit);
-    // console.log(TreuilGauche);
-
+   
     if (TreuilDroit == true) {
         document.querySelector("#CG > tbody > tr:nth-child(9)").setAttribute("style", "background-color:green")
 
@@ -613,7 +721,6 @@ function canot() {
         document.querySelector("#CG > tbody > tr:nth-child(20) > td:nth-child(6)").innerHTML = 0
         document.querySelector("#CG > tbody > tr:nth-child(20) > td:nth-child(7)").innerHTML = 0
     }
-    // console.log(siegeSelArr);
 
 
     for (let i = 0; i < canot.length; i++) {
@@ -826,6 +933,15 @@ function FLIR_rack_opérateur() {
 
 function SX_16() {
     const checkbox = document.querySelector("#SX_16")
+    if(document.querySelector("#SX_16").checked == true){
+        document.querySelector("#CG > tbody > tr:nth-child(30) > td:nth-child(3)").innerHTML = 40.4
+        document.querySelector("#CG > tbody > tr:nth-child(30) > td:nth-child(4)").innerHTML = 2009
+        document.querySelector("#CG > tbody > tr:nth-child(30) > td:nth-child(5)").innerHTML = 81251
+        document.querySelector("#CG > tbody > tr:nth-child(30) > td:nth-child(6)").innerHTML = -977
+        document.querySelector("#CG > tbody > tr:nth-child(30) > td:nth-child(7)").innerHTML = -39507
+    }
+
+
     checkbox.addEventListener('change', (event) => {
         if (event.currentTarget.checked) {
             document.querySelector("#CG > tbody > tr:nth-child(30) > td:nth-child(3)").innerHTML = 40.4
@@ -943,18 +1059,13 @@ function Matériels_divers_cabine() {
 
 function consoHoraire() {
     let ch = document.getElementById("ConsoH").value
-    // console.log(ch);
     let durée = (document.getElementById("durée").value)
-    // console.log(durée);
     let majoumin = durée.indexOf("h")
     // console.log(majoumin);
 
 
     if (majoumin == 1) {
         let HM = durée.split("h")
-        // alert("minuscule");
-        // console.log(typeof (HM));
-        // console.log(HM);
         let MM = Number(HM[0] * 60) + Number(HM[1])
         // console.log(MM);
         let TRO = MM * (ch / 60)
@@ -965,9 +1076,6 @@ function consoHoraire() {
 
     else {
         let HM = durée.split("H")
-        // alert("majuscule");
-        // console.log(typeof (HM));
-        // console.log(HM);
         let MM = Number(HM[0] * 60) + Number(HM[1])
         // console.log(MM);
         let TRO = MM * (ch / 60)
@@ -1024,11 +1132,11 @@ function massealt() {
         // console.log(ECM);
         document.querySelector("#CG > tbody > tr:nth-child(49) > td:nth-child(4)").innerHTML = ECM
 
-        nourrices = document.querySelector("#CG > tbody > tr:nth-child(40) > td:nth-child(3)").innerHTML
-        document.querySelector("#CG > tbody > tr:nth-child(40) > td:nth-child(4)").innerHTML = 5026
-        document.querySelector("#CG > tbody > tr:nth-child(40) > td:nth-child(5)").innerHTML = 469931
-        document.querySelector("#CG > tbody > tr:nth-child(40) > td:nth-child(6)").innerHTML = -20
-        document.querySelector("#CG > tbody > tr:nth-child(40) > td:nth-child(7)").innerHTML = -1870
+        nourrices = document.querySelector("#CG > tbody > tr:nth-child(40) > td:nth-child(3)").innerHTML=93.5
+        document.querySelector("#CG > tbody > tr:nth-child(40) > td:nth-child(4)").innerHTML = 5037
+        document.querySelector("#CG > tbody > tr:nth-child(40) > td:nth-child(5)").innerHTML = 470959.5
+        document.querySelector("#CG > tbody > tr:nth-child(40) > td:nth-child(6)").innerHTML = -19
+        document.querySelector("#CG > tbody > tr:nth-child(40) > td:nth-child(7)").innerHTML = -1744
 
         reservoirP = document.querySelector("#CG > tbody > tr:nth-child(41) > td:nth-child(3) > input").value
         TRO = Number(nourrices) + Number(reservoirP)
@@ -1051,7 +1159,9 @@ function massealt() {
         localStorage.setItem("MasseAtt", MasseAtt)
         localStorage.setItem("MasseDeg", MasseDeg)
         localStorage.setItem("reservoirP", reservoirP)
-        localStorage.setItem("durée", durée)
+        // localStorage.setItem("durée", durée)
+
+
     }
 }
 
@@ -1226,7 +1336,6 @@ function Tr0cg() {
 
     masseTROkg = Number(document.querySelector("#CG > tbody > tr:nth-child(41) > td:nth-child(3) > input").value)
 
-    // localStorage.setItem("masseTROkg", masseTROkg)
     for (let i = 0; i < tabTr0.length; i++) {
         if (tabTr0[i][1] == masseTROkg) {
             // alert("bingo! " + i)
@@ -1365,14 +1474,15 @@ function Tr0consommé() {
         if (tabTr0[i][1] == masseTROconsommekg) {
             // alert("bingo! " + i)
             document.querySelector("#CG > tbody > tr:nth-child(43) > td:nth-child(4)").innerHTML = tabTr0[i][2]
+            newvalue= tabTr0[i][2]
             document.querySelector("#CG > tbody > tr:nth-child(43) > td:nth-child(5)").innerHTML = tabTr0[i][3]
         }
-        if (tabTr0[i][1] < masseTROconsommekg && tabTr0[i + 1][1] > masseTROconsommekg) {
+        else if (tabTr0[i][1] < masseTROconsommekg && tabTr0[i + 1][1] > masseTROconsommekg) {
             // alert("trouvé" + i)
-            newvalue = Math.round(((masseTROconsommekg - tabTr0[i][1]) * ((tabTr0[i][4]) / 10)) + tabTr0[i][2])
+            const newvalue = Math.round(((masseTROconsommekg - tabTr0[i][1]) * ((tabTr0[i][4]) / 10)) + tabTr0[i][2])
+            console.log(newvalue);
             newtab.push([, masseTROkg, newvalue,])
 
-            // console.log(newvalue);
 
             document.querySelector("#CG > tbody > tr:nth-child(43) > td:nth-child(4)").innerHTML = newvalue
             document.querySelector("#CG > tbody > tr:nth-child(43) > td:nth-child(5)").innerHTML = masseTROconsommekg * Number(newvalue)
@@ -1421,5 +1531,4 @@ console.log(ECM)
 
 document.querySelector("#CG > tbody:nth-child(1) > tr:nth-child(41) > td:nth-child(3) > input:nth-child(1)").value = Number(ECM)
 }
-
-
+ 
